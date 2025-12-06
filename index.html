@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Comunidad - Descarga Oficial</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .mobile-container {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Colores de la app */
+        .bg-app-primary { background-color: #4CAF50; }
+        .text-app-primary { color: #4CAF50; }
+        .bg-app-secondary { background-color: #2196F3; }
+        
+        /* Animaciones */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        .pulse {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        /* Barra de progreso */
+        .progress-container {
+            width: 100%;
+            height: 6px;
+            background-color: #e0e0e0;
+            border-radius: 3px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #8BC34A);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Header con logo -->
+        <div class="bg-gradient-to-r from-green-500 to-blue-500 text-white p-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-2xl font-bold">Mi Comunidad</h1>
+                    <p class="text-white/80 text-sm mt-1">App de reportes comunitarios</p>
+                </div>
+                <div class="bg-white/20 p-3 rounded-full">
+                    <i class="fa-solid fa-users text-2xl"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contenido principal -->
+        <div class="p-6">
+            <!-- Icono grande de la app -->
+            <div class="flex justify-center mb-6">
+                <div class="w-32 h-32 rounded-2xl bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center shadow-xl floating">
+                    <i class="fa-solid fa-map-marker-alt text-white text-5xl"></i>
+                </div>
+            </div>
+            
+            <!-- Información de la app -->
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Mi Comunidad</h2>
+                <p class="text-gray-600 mb-4">Versión 1.0 • 20.1 MB • Android 6.0+</p>
+                
+                <div class="flex items-center justify-center space-x-6 mb-6">
+                    <div class="text-center">
+                        <div class="text-xl font-bold text-app-primary">4.8</div>
+                        <div class="text-xs text-gray-500">
+                            <i class="fa-solid fa-star text-yellow-500"></i>
+                            <i class="fa-solid fa-star text-yellow-500"></i>
+                            <i class="fa-solid fa-star text-yellow-500"></i>
+                            <i class="fa-solid fa-star text-yellow-500"></i>
+                            <i class="fa-solid fa-star-half text-yellow-500"></i>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-xl font-bold text-app-primary">1K+</div>
+                        <div class="text-xs text-gray-500">Descargas</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-xl font-bold text-app-primary">UTNG</div>
+                        <div class="text-xs text-gray-500">Desarrollador</div>
+                    </div>
+                </div>
+                
+                <p class="text-gray-700 mb-6 px-4">
+                    Reporta problemas de tu comunidad: alumbrado, basura, agua y más. 
+                    Colabora para mejorar tu entorno.
+                </p>
+            </div>
+            
+            <!-- Características -->
+            <div class="mb-8">
+                <h3 class="font-bold text-gray-800 mb-4 text-lg">Características</h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-green-50 p-4 rounded-xl border border-green-100">
+                        <i class="fa-solid fa-lightbulb text-green-600 text-xl mb-2"></i>
+                        <p class="text-sm font-medium text-gray-800">Reporte de alumbrado</p>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-xl border border-blue-100">
+                        <i class="fa-solid fa-trash text-blue-600 text-xl mb-2"></i>
+                        <p class="text-sm font-medium text-gray-800">Reporte de basura</p>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-xl border border-purple-100">
+                        <i class="fa-solid fa-droplet text-purple-600 text-xl mb-2"></i>
+                        <p class="text-sm font-medium text-gray-800">Problemas de agua</p>
+                    </div>
+                    <div class="bg-orange-50 p-4 rounded-xl border border-orange-100">
+                        <i class="fa-solid fa-map text-orange-600 text-xl mb-2"></i>
+                        <p class="text-sm font-medium text-gray-800">Mapa interactivo</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Instrucciones -->
+            <div class="bg-gray-50 p-4 rounded-xl mb-6 border border-gray-200">
+                <h4 class="font-bold text-gray-800 mb-3">📱 Cómo instalar:</h4>
+                <ol class="text-sm text-gray-600 space-y-2">
+                    <li class="flex items-start">
+                        <span class="bg-app-primary text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2 mt-0.5">1</span>
+                        Toca "Descargar APK" abajo
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-app-primary text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2 mt-0.5">2</span>
+                        Permite "Orígenes desconocidos" cuando pregunte
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-app-primary text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2 mt-0.5">3</span>
+                        Abre el APK desde Notificaciones o Descargas
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-app-primary text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2 mt-0.5">4</span>
+                        ¡Listo! Inicia sesión con tu cuenta
+                    </li>
+                </ol>
+            </div>
+            
+            <!-- Botón de descarga -->
+            <div class="mb-6">
+                <div id="progress-container" class="progress-container hidden">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+                
+                <button id="download-btn" onclick="startDownload()" 
+                        class="w-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold py-4 rounded-xl text-lg shadow-lg transition-all duration-300 flex items-center justify-center">
+                    <i class="fa-solid fa-download mr-3"></i>
+                    <span id="btn-text">Descargar APK (20.1 MB)</span>
+                </button>
+                
+                <!-- Enlace oculto para la descarga real -->
+                <a id="download-link" href="mi-comunidad.apk" download class="hidden"></a>
+            </div>
+            
+            <!-- QR Code para descargar -->
+            <div class="text-center p-4 border-t border-gray-200">
+                <p class="text-gray-600 text-sm mb-3">📲 Escanea para descargar en tu celular:</p>
+                <div class="flex justify-center">
+                    <div class="w-32 h-32 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
+                        <!-- QR Code placeholder - reemplaza con tu QR real -->
+                        <div class="text-center">
+                            <i class="fa-solid fa-qrcode text-gray-400 text-4xl mb-2"></i>
+                            <p class="text-xs text-gray-500">QR Code</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500 mt-3">Apunta la cámara de tu celular</p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="bg-gray-900 text-white p-4 text-center">
+            <p class="text-sm">© 2025 Mi Comunidad App </p>
+            <p class="text-xs text-gray-400 mt-1">App oficial de reportes comunitarios</p>
+        </div>
+    </div>
+
+    <script>
+        function startDownload() {
+            const btn = document.getElementById('download-btn');
+            const btnText = document.getElementById('btn-text');
+            const progressContainer = document.getElementById('progress-container');
+            const progressBar = document.getElementById('progress-bar');
+            const downloadLink = document.getElementById('download-link');
+            
+            // Evitar múltiples clics
+            if (btn.disabled) return;
+            
+            // Cambiar estado del botón
+            btn.disabled = true;
+            btn.classList.remove('from-green-500', 'to-blue-500', 'hover:from-green-600', 'hover:to-blue-600');
+            btn.classList.add('bg-gray-300', 'text-gray-500');
+            
+            // Mostrar barra de progreso
+            progressContainer.classList.remove('hidden');
+            
+            // Simular progreso de descarga
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.random() * 15;
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(interval);
+                    completeDownload();
+                }
+                
+                progressBar.style.width = progress + '%';
+                btnText.textContent = `Descargando... ${Math.round(progress)}%`;
+                
+                // Cambiar color según progreso
+                if (progress < 30) {
+                    progressBar.style.background = 'linear-gradient(90deg, #4CAF50, #8BC34A)';
+                } else if (progress < 70) {
+                    progressBar.style.background = 'linear-gradient(90deg, #2196F3, #21CBF3)';
+                } else {
+                    progressBar.style.background = 'linear-gradient(90deg, #FF9800, #FFC107)';
+                }
+            }, 200);
+            
+            function completeDownload() {
+                // Ocultar barra de progreso
+                setTimeout(() => {
+                    progressContainer.classList.add('hidden');
+                }, 500);
+                
+                // Cambiar botón a "Instalar"
+                btnText.innerHTML = '<i class="fa-solid fa-check mr-2"></i> APK Descargado';
+                btn.classList.remove('bg-gray-300');
+                btn.classList.add('bg-green-500', 'text-white');
+                
+                // Trigger de descarga real
+                try {
+                    downloadLink.click();
+                    showNotification('APK descargado. Busca "mi-comunidad.apk" en tus archivos.');
+                } catch (e) {
+                    console.error('Error en descarga:', e);
+                    showNotification('Error en descarga. Intenta de nuevo.');
+                }
+                
+                // Restaurar botón después de 5 segundos
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.classList.remove('bg-green-500', 'text-white');
+                    btn.classList.add('from-green-500', 'to-blue-500', 'hover:from-green-600', 'hover:to-blue-600', 'text-white');
+                    btnText.innerHTML = '<i class="fa-solid fa-download mr-3"></i> Descargar APK (15 MB)';
+                }, 5000);
+            }
+        }
+        
+        function showNotification(message) {
+            // Crear notificación
+            const notification = document.createElement('div');
+            notification.className = 'fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-full shadow-lg z-50 animate-pulse';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            // Remover después de 3 segundos
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+        
+        // Efecto hover en el botón
+        document.getElementById('download-btn').addEventListener('mouseenter', function() {
+            if (!this.disabled) {
+                this.classList.add('shadow-xl', 'scale-105');
+            }
+        });
+        
+        document.getElementById('download-btn').addEventListener('mouseleave', function() {
+            this.classList.remove('shadow-xl', 'scale-105');
+        });
+    </script>
+</body>
+</html>
